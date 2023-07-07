@@ -38,4 +38,4 @@ curl --location 'http://localhost:8080/loan' \
 
 ## Postman collection con los endpoints
 
-Importar [`galicia-challenge.postman_collection`](galicia-challenge.postman_collection) en postman.
+Importar `galicia-challenge.postman_collection` en postman.
