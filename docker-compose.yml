@@ -1,0 +1,26 @@
+version: '3'
+services:
+  web:
+    image: matiasalonso23/library-challenge
+    ports:
+     - "8080:8080"
+    depends_on:
+     - db
+    networks:
+      - internal_network
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: library-challenge
+    ports:
+      - "5432:5432"
+    networks:
+      - internal_network
+
+networks:
+  internal_network:
+    driver: bridge
+
